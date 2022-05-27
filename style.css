@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+/* rap */
+.rap h1, .rap h2, .rap h3, .rap h4{
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+}
+.rap .subtitle, .rap p, .rap .lyricText{
+    font-family: 'Noto Sans TC', sans-serif;
+    color: white;
+}
+body.rap{
+    background-color: black;
+}
+.rap img{
+    -webkit-user-drag: none;
+    user-select: none;
+}
+.rap #circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    transition: height 0.5s ,width 0.5s;
+    transform: scale(-1, -1);
+    transform: translate(-100%, -100%);
+}
+.rap .header{
+    position: relative;
+    height: 600px;
+}
+.rap .title h1, .rap  .title h4{
+    font-weight: bold;
+    font-style: italic;
+    user-select: none;
+}
+.rap #enTitle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1000px;
+    height: 300px;
+    padding-top: 50px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.rap .arrow{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+    animation: arrow 1.5s ease-in-out  infinite both;
+}
+@keyframes arrow{
+    0%{
+        bottom: 0px;
+        opacity: 1;
+    }
+    100%{
+        bottom: -10px;
+        opacity: 0;
+    }
+}
+.rap .chineseTitle{
+    position: absolute;
+    top: 48.5%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.rap .chineseTitle h1, .rap .chineseTitle h4{
+    color: black;
+}
+
+/* content*/
+.rap .outterBox{
+    position: relative;
+    margin-top: 150px;
+    height: 600px;
+    margin-bottom: 300px;
+}
+
+/* rapper information */
+.rap .rapperInfo{
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+}
+
+/* image */
+.rap .ImageBox{
+    position: relative;
+}
+.rap .backgroundImage{
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    filter: grayscale(1);
+    
+}
+.rap .frontImage{
+    position: absolute;
+    top: 180px;
+    left: 0;
+}
+
+
+/* information*/
+.rap .info{
+    position: relative;
+}
+.rap .info h1{
+    text-align: end;
+    font-style: italic;
+    font-weight: 700;
+}
+.rap .info .text{
+    margin-top: 55px;
+}
+.rap .info .text p{
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 2px;
+}
+/* music introduction*/
+.rap .albumImageBox{
+    visibility: hidden;
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.rap .audioBox{
+    position: relative;
+    margin-top: 50px;
+}
+.rap .cd{
+    position: absolute;
+    top: 50px;
+    left: 150px;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+.rap .playing{
+    animation: cdPlaying 8s linear infinite both;
+}
+@keyframes cdPlaying{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.rap .albumImage{
+    position: absolute;
+    top: 30px;
+}
+.rap .albumImageBox .text .subtitle{
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.rap audio{
+    position: absolute;
+    top: 350px;
+    background-color: white;
+}
+.rap audio::-webkit-media-controls-panel {
+    background-color: white;
+}
+/* hotdog */
+.rap .action{
+    visibility: visible;
+}
+
+/* navigation */
+.rap .navigate{
+    position: relative;
+    margin-top: 480px;
+    width: 64px;
+    height: 33px;
+    border: 0.5px solid white;
+    display: flex;
+}
+.rap .navigate .prev{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    cursor: pointer;
+}
+.rap .navigate .prev:hover{
+    background-color: rgb(214, 214, 214);
+}
+.rap .navigate .next{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    cursor: pointer;
+}
+.rap .navigate .next:hover{
+    background-color: rgb(214, 214, 214);
+}
+.rap .navigate .next img, .rap  .prev img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-user-drag: none;
+}
+.rap .navigate .navLine{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 98%
+}
+
+/* lyric */
+.rap .lyric{
+    position: absolute;
+    box-sizing: content-box;
+}
+.rap .lyricText{
+    padding-top: 5px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 5px;
+    font-size: 12px;
+    color: black;
+    letter-spacing: 1px;
+    user-select: none;
+}
+.rap .lyricText h6{
+    font-size: 14px;
+    text-align: end;
+}
+.rap #mralmost{
+    top: 600px;
+    left: 50px;
+}
+.rap #poorandrich{
+    top: 700px;
+    left: 660px;
+}
+.rap #water{
+    top: 600px;
+    left: 10px;
+}
+.rap #smoke{
+    top: 700px;
+    left: 600px;
+}
+.rap #process{
+    top: 550px;
+    left: 900px;
+}
+.rap #selfie{
+    top: 600px;
+    left: 300px;
+}
+.rap #anotherday{
+    top: 600px;
+    left: 800px;
+}
+.rap #infinite{
+    top: -100px;
+    left: 700px;
+}
+.rap #antilove{
+    top: 700px;
+    left: 300px;
+}
+.rap #bars88{
+    top: 500px;
+    left: 1000px;
+}
+.rap #bigthing{
+    top: 700px;
+    left: 50px;
+}
+.rap #youngboy{
+    top: 600px;
+    left: 660px;
+}
+/* footer */
+.rap .footerLine{
+    width: 100%;
+}
+.rap .footer{
+    padding-bottom: 50px;
+}
+.rap .footer .info{
+    margin-top: 60px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+.rap .footer .info p{
+    text-align: center;
+    margin-bottom: 0;
+}
